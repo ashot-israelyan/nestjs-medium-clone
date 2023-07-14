@@ -183,7 +183,7 @@ export class ArticleService {
 
     if (isNotFavorited) {
       user.favorites.push(article);
-      article.favouritesCount++;
+      article.favoritesCount++;
 
       await this.userRepository.save(user);
       await this.articleRepository.save(article);
@@ -207,7 +207,7 @@ export class ArticleService {
 
     if (articleIndex >= 0) {
       user.favorites.splice(articleIndex, 1);
-      article.favouritesCount--;
+      article.favoritesCount--;
 
       await this.userRepository.save(user);
       await this.articleRepository.save(article);

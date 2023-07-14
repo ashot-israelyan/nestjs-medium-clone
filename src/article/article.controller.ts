@@ -62,6 +62,11 @@ export class ArticleController {
     return this.articleService.buildArticleResponse(article);
   }
 
+  @Get(':slug/comments')
+  async getSingleArticleComments(@Param('slug') slug: string) {
+    return [];
+  }
+
   @Delete(':slug')
   @UseGuards(AuthGuard)
   async deleteArticle(
