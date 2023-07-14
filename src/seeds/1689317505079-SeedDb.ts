@@ -18,5 +18,7 @@ export class SeedDb1689317505079 implements MigrationInterface {
     );
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {}
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    return Promise.resolve(null);
+  }
 }
